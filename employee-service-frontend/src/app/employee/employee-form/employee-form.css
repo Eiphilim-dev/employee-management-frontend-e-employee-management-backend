@@ -1,0 +1,18 @@
+.container {
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 16px 20px;
+  box-sizing: border-box;
+}
+
+mat-form-field {
+  display: block;
+  width: 100%;           /* prende tutta la larghezza disponibile */
+  margin-bottom: 12px !important;
+}
+
+.mat-mdc-text-field-wrapper {
+  width: 100% !important;
+}
+

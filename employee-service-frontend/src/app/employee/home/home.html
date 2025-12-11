@@ -1,0 +1,83 @@
+<div class="container" style="margin: 20px auto; width: 900px; max-width: 95%;">
+    <br>
+    <h3 style="color: blueviolet; text-align: center;">
+        <strong>Full Stack wimat-header-cell Angular 20 Spring Boot & MySQL</strong>
+    </h3>
+    <br>
+    <mat-form-field>
+        <input (input)="searchEmployee(filter.value)" matInput placeholder= "Search Employee here" type="text" #filter>
+    </mat-form-field>
+    <button (click)="openDialog()" mat-flat-button color="accent" style="width: 100px; float: right; margin: 15px;">Add +</button>
+    <br>
+    <div class="example-container mat-elevation-z8">
+     <mat-table #table [dataSource]="dataSource" matSort>
+
+
+  <!-- ID Column -->
+  <ng-container matColumnDef="id">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> ID </mat-header-cell>
+    <mat-cell *matCellDef="let employee"> {{employee.id}} </mat-cell>
+  </ng-container>
+
+  <!-- FirstName Column -->
+  <ng-container matColumnDef="firstName">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> FirstName </mat-header-cell>
+    <mat-cell *matCellDef="let employee"> {{employee.firstName}} </mat-cell>
+  </ng-container>
+
+  <!-- LastName Column -->
+  <ng-container matColumnDef="lastName">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> LastName </mat-header-cell>
+    <mat-cell *matCellDef="let employee"> {{employee.lastName}} </mat-cell>
+  </ng-container>
+
+  <!-- Email Column -->
+  <ng-container matColumnDef="email">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> Email </mat-header-cell>
+    <mat-cell *matCellDef="let employee"> {{employee.email}} </mat-cell>
+  </ng-container>
+
+  <!--Number Column-->
+  <ng-container matColumnDef="number">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> PhoneNumber </mat-header-cell>
+    <mat-cell *matCellDef="let employee"> {{employee.number}} </mat-cell>
+  </ng-container>
+
+  <!--Salary Column-->
+  <ng-container matColumnDef="salary">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> Salary </mat-header-cell>
+    <mat-cell *matCellDef="let employee"> €{{employee.salary}} </mat-cell>
+  </ng-container>
+
+ <!--Edit Column-->
+<ng-container matColumnDef="edit">
+  <mat-header-cell *matHeaderCellDef> Edit </mat-header-cell>
+  <mat-cell *matCellDef="let employee"> 
+    <button mat-flat-button (click)="openDialog(employee)" 
+            style="height: 27px; width: auto; background-color: grey; color: white;">
+      Edit
+    </button> 
+  </mat-cell>
+</ng-container>
+
+<!--Delete Column-->
+<ng-container matColumnDef="delete">
+  <mat-header-cell *matHeaderCellDef> Delete </mat-header-cell>
+  <mat-cell *matCellDef="let employee"> 
+    <button (click)="deleteEmployee(employee.id)" mat-flat-button 
+            style="height: 27px; width: auto; background-color: #f44336; color: white;">
+      Delete
+    </button> 
+  </mat-cell>
+</ng-container>
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let employees; columns: displayedColumns;"></mat-row>
+    </mat-table>
+
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+                 showFirstLastButtons
+                 aria-label="Select page of periodic elements">
+  </mat-paginator>
+  </div>
+</div>
+

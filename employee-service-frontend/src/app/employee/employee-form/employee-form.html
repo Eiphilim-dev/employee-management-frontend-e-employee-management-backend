@@ -1,0 +1,50 @@
+<div class="container" style="width: 350px">
+    <div>
+        <button mat-icon-button style="float: right; margin:15px;">
+            <mat-icon style="color:lightcoral">close</mat-icon>
+        </button>
+    </div>
+    <div mat-dialog-title>
+        <h3 style="color: darkorchid; text-align: center;">
+           Employee Form 
+        </h3>
+    </div>
+    <div mat-dialog-content style="display: flex; flex-direction: column; align-items: center;">
+    <mat-form-field style="width: 100%;">
+        <input matInput [(ngModel)]="data.firstName" type="text" placeholder="Enter your FirstName">
+        <mat-icon fontIcon="person" matSuffix></mat-icon>
+    </mat-form-field>
+    <br>
+    <mat-form-field style="width: 100%;">
+        <input matInput [(ngModel)]="data.lastName" type="text" placeholder="Enter your LastName">
+        <mat-icon fontIcon="person" matSuffix></mat-icon>
+    </mat-form-field>
+    <br>
+    <mat-form-field style="width: 100%;">
+        <input matInput [(ngModel)]="data.email" type="text" placeholder="Enter your Email">
+        <mat-icon fontIcon="email" matSuffix></mat-icon>
+    </mat-form-field>
+    <br>
+    <mat-form-field style="width: 100%;">
+        <input matInput [(ngModel)]="data.number" type="text" placeholder="Enter your Number">
+        <mat-icon fontIcon="phone" matSuffix></mat-icon>
+    </mat-form-field>
+    <br>
+    <mat-form-field style="width: 100%;">
+        <input matInput [(ngModel)]="data.salary" type="text" placeholder="Enter your Salary">
+        <mat-icon fontIcon="attach_money" matSuffix></mat-icon>
+    </mat-form-field>
+</div>
+<div mat-dialog-actions align="center">
+  <button
+    (click)="addOrEditEmployee(data)"
+    mat-flat-button
+    color="primary"
+  >
+    Submit
+  </button>
+  <button mat-flat-button mat-dialog-close="false" color="warn">
+    Cancel
+  </button>
+</div>
+</div>

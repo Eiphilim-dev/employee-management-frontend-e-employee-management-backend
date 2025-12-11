@@ -1,0 +1,59 @@
+table {
+    width: 100%;
+    border: 1px solid currentColor;
+    text-align: center;
+}
+.mdc-notched-outline {
+    .mdc-notched-outline--no-label{
+        align-items: center;
+        height: 40px;
+    }
+}
+.mat-cell{
+    height: 30px;
+}
+
+    .mat-mdc-form-field-flex{
+        align-items: center;
+        height: 40px;
+    }
+
+    th.mat-sort-header-sorted{
+        color: black;
+    }
+
+    
+.mat-column-email {
+    flex: 0 0 250px !important; 
+    padding-right: 10px !important;
+}
+
+
+.mat-column-id {
+    flex: 0 0 60px !important;
+}
+
+.mat-column-firstName {
+    flex: 0 0 120px !important;
+}
+
+.mat-column-lastName {
+    flex: 0 0 120px !important;
+}
+
+.mat-column-number {
+    white-space: nowrap !important;
+    flex: 0 0 140px !important;
+}
+
+.mat-column-salary {
+    flex: 0 0 100px !important;
+}
+
+.mat-column-edit {
+    flex: 0 0 80px !important;
+}
+
+.mat-column-delete {
+    flex: 0 0 80px !important;
+}

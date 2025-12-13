@@ -9,7 +9,6 @@ Full-stack web application for managing employee records with CRUD operations, b
 - **Angular Material** for UI components
 - **TypeScript**
 - **RxJS** for reactive programming
-- **Responsive Design**
 
 ### Backend
 - **Spring Boot 3**
@@ -28,7 +27,6 @@ Full-stack web application for managing employee records with CRUD operations, b
 - ✅ **Pagination**: Navigate through large datasets
 - ✅ **Material Design**: Clean and modern UI with Angular Material
 - ✅ **RESTful API**: Backend provides REST endpoints
-- ✅ **Responsive Layout**: Works on desktop and mobile devices
 
 ---
 
